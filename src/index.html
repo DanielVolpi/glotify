@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Angular Workshop</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body ng-strict-di>
-    <div ng-view class="container"></div>
 
-    <script src="/index.bundle.js"></script>
-</body>
+<html>
+	<head>
+		<title>Angular Workshop</title>
+		<link rel="stylesheet" href="/styles.css">
+	</head>
+	<body ng-strict-di>
+		<header ng-include src="'app/views/menubar.html'"></header>
+		
+		<div ng-view class="container"></div>
+
+		<script src="/index.bundle.js"></script>
+	</body>
 </html>

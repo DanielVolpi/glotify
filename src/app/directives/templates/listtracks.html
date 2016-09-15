@@ -1,0 +1,14 @@
+<div class="content">
+	<div>
+		<h1 class="label">Tracks from this Album</h1>
+		
+		<ul>
+			<div ng-repeat="track in lsttrcCtrl.getListOfTracks()">
+				<li>
+				{{track.name}}
+				<div class="add" ng-click="lsttrcCtrl.addToFavorite(track)">+</div>
+				</li>
+			</div>
+		</ul>
+	</div>
+</div>

@@ -1,6 +1,7 @@
 import angular from 'angular';
 
-import './app';
+import './app'; //imports "app" folder
 
 
-angular.bootstrap(document, ['App']);
+angular.bootstrap(document, ['SpotifyGlobantApp']);
+console.log("hi");

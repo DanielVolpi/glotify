@@ -1,0 +1,13 @@
+<div ng-show=!favCtrl.isEmpty()>
+	<div class="content">
+		
+		<h1 class="label">Favorite Tracks</h1>
+		
+		<ul id="favorites">
+			<li ng-repeat="favoriteTrack in favCtrl.getListOfFavoriteTracks()">
+				<h3>{{favoriteTrack.name}}</h3>
+				<div class="remove" ng-click="favCtrl.unFavorite(favoriteTrack)">x</div>
+			</li>
+		</ul>
+	</div>
+</div>

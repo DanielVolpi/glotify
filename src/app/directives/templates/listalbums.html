@@ -1,0 +1,19 @@
+<div class="content">
+	<div>
+		
+		<h1 class="label">Filter Albums by Name</h1>
+		<input type="text" ng-model="albumToSearch" placeholder="Album Name">
+		
+		<h1 class="label">Albums by this Artist</h1>
+		
+		<ul>
+			<div ng-repeat="album in lstalbCtrl.getListOfAlbums() | filter:albumToSearch">
+				<li ng-init="albumshow = false">
+					<img ng-click="albumshow = !albumshow" ng-src="{{album.images[0].url}}" ng-show="album.images[0].url">
+					<h3 class="listitem">{{album.name}}</h3>
+					<cd-list-tracks ng-show=albumshow albumid='{{album.id}}'></cd-list-tracks>
+				</li>
+			</div>
+		</ul>
+	</div>
+</div>

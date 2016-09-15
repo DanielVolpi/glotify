@@ -1,0 +1,26 @@
+<div class="content">
+	<div>
+		<h3 class="label">Artist Search</h3>
+		
+		<form ng-submit="artsrchCtrl.searchForArtist(artistName)">
+			<input type="text" ng-model="artistName" placeholder="Artist Name">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	
+	<div>
+		<h3 class="label">Results</h3>
+		
+		<ul>
+			<div ng-repeat="artist in artsrchCtrl.getListOfArtists()">
+				<li ng-click="artsrchCtrl.setCurrentArtist(artist)">{{artist.name}}</li>
+			</div>
+		</ul>
+	</div>
+	
+	<div>
+		<h3 class="label">Current Artist</h3>
+			<div class="selection">{{artsrchCtrl.getCurrentArtist().name}}</div>
+			<p ng-show="artsrchCtrl.getCurrentArtist().id"><a href='/result?id={{artsrchCtrl.getCurrentArtist().id}}'>Get Albums</a></p>
+	</div>
+</div>
