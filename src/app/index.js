@@ -8,7 +8,7 @@ import {cdFavorites} from './directives';
 import {cdListAlbums} from './directives';
 import {cdListTracks} from './directives';
 
-angular.module('SpotifyGlobantApp', ['ngRoute'])
+angular.module('SpotifyGlobantApp', ['ngRoute','ngStorage'])
 	.config(routes)
 	.service('AlbumService', AlbumService)
 	.service('DiscographyService', DiscographyService)
